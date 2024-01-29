@@ -1,0 +1,35 @@
+#include <stdio.h>
+    int main(){
+        float fixed=100.0;
+        int call;
+        int sms; float callrate; float smsrate; float tax; float stax; float bill;
+        printf("enter number of calls: ");
+        scanf("%d",&call);
+        printf("enter number of sms: ");
+        scanf("%d",&sms);
+        if(call<=100)
+        {
+            callrate=0.0;
+        }
+        else if(call>100 && call<=300)
+        {
+            callrate=(call-100)*2;
+        }
+        else{
+            callrate=(call-100)*1.5;
+        }
+        if(sms<=100)
+        {
+            smsrate=0.0;
+        }
+        else
+        {
+            smsrate=(sms-100)*1.5;
+        }
+        tax=fixed+callrate+smsrate;
+        printf("tax is %f",tax);
+        stax=tax*0.05;
+        bill=stax+tax;
+        printf("mobile bill is: %f",bill);
+        return 0;
+    }
